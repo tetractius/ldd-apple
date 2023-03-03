@@ -9,7 +9,7 @@ then
 
   /bin/ls -lOL $1 | grep restricted
   IS_EXECUTABLE_RESTRICTED=$?
-  if [ "$IS_EXECUTABLE" == "0" ]
+  if [ "$IS_EXECUTABLE_RESTRICTED" == "0" ]
   then
     echo "===== The executable $1 is restricted, so no information at runtime, sorry. More info at https://apple.co/3sDkQZJ"
     exit
